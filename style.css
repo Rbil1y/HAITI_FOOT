@@ -1104,6 +1104,30 @@ footer {
   color: var(--text-dim);
 }
 
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-separator {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
+
+.footer-aylab {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.footer-aylab .accent-aylab {
+  color: var(--gold);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
 /* =====================================================
    RESPONSIVE
    ===================================================== */
@@ -1166,6 +1190,15 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+
+  .footer-bottom-left {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .footer-separator {
+    display: none; /* Hide bullet separator on mobile vertical layout */
   }
 
   .menu-toggle {
