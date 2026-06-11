@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Les Grenadiers — La sélection haïtienne de football en route pour la Coupe du Monde. Découvrez l'équipe, le parcours et rejoignez les supporters.">
+  <title>Les Grenadiers | Haïti — Coupe du Monde</title>
+  <link rel="icon" type="image/svg+xml" href="images/fhf-logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       EN-TÊTE & NAVIGATION
+       ═══════════════════════════════════════════ -->
+  <header>
+    <!-- Bande d'accent aux couleurs nationales -->
+    <span class="header-accent" aria-hidden="true"></span>
+    
+    <!-- Barre de défilement en CSS pur -->
+    <div class="scroll-progress-bar"></div>
+
+    <nav class="container nav-bar" aria-label="Navigation principale">
+      <a href="#accueil" class="logo" id="nav-logo">
+        <img src="images/fhf-logo.svg" alt="Logo de la Fédération Haïtienne de Football (FHF) en bleu, blanc et rouge" class="logo-img">
+        <span class="logo-group">
+          <span class="logo-text">Grenadiers</span>
+          <span class="logo-sub">Haïti · Mondial 2026</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#accueil" id="nav-accueil">Accueil</a></li>
+        <li><a href="squad.html" id="nav-equipe">L'Équipe</a></li>
+        <li><a href="#parcours" id="nav-parcours">Parcours</a></li>
+        <li><a href="#supporter" class="nav-cta" id="nav-supporter">Supporter ⚽</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION HÉROS
+         ═══════════════════════════════════════════ -->
+    <section id="accueil" class="hero" aria-label="Bannière principale">
+      <figure class="hero-bg">
+        <img src="images/squad-team-2026.jpg"
+             alt="Photo de groupe officielle en plan large montrant l'effectif complet et le staff technique de la sélection d'Haïti (Les Grenadiers) posant ensemble avec fierté sur la pelouse du stade.">
+        <figcaption class="hero-overlay"></figcaption>
+      </figure>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Sélection Nationale d'Haïti · Grenadye Alaso !</p>
+        <h1>Les Grenadiers<br>au <span class="flag-text">Mondial</span></h1>
+        <p class="hero-desc">
+          Pour la première fois depuis des décennies, la sélection haïtienne écrit l'histoire.
+          Revivez le parcours, découvrez les joueurs clés et rejoignez la fièvre des Grenadiers.
+        </p>
+        <div class="hero-actions">
+          <a href="#equipe" class="btn btn-primary" id="hero-cta-equipe">Découvrir l'équipe</a>
+          <a href="#parcours" class="btn btn-outline" id="hero-cta-parcours">Le parcours</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GALERIE DE L'ÉQUIPE (Grid)
+         ═══════════════════════════════════════════ -->
+    <section id="equipe" class="gallery" aria-label="Galerie de l'équipe">
+      <div class="container">
+        <div class="gallery-header reveal reveal-up">
+          <p class="section-label">Les Piliers</p>
+          <h2 class="section-heading">Une Équipe, Une Nation</h2>
+          <p class="section-desc">
+            Trois forces majeures complémentaires qui portent le maillot bleu et rouge avec fierté et guident les Grenadiers sur la scène mondiale.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <!-- Le Gardien (Johny Placide) -->
+          <article class="card reveal reveal-up" data-delay="0">
+            <figure class="card-image">
+              <span class="card-number">1</span>
+              <img src="images/johny-placide.jpg"
+                   alt="Portrait de face du gardien et capitaine Johny Placide en maillot officiel noir et jaune.">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Gardien</span>
+              <h3 class="card-title">Johny Placide (C)</h3>
+              <div class="player-meta">
+                <span class="meta-item">Club : <strong>SC Bastia (FR)</strong></span>
+                <span class="meta-item">Âge : <strong>38 ans</strong></span>
+                <span class="meta-item">Sélections : <strong>81</strong></span>
+              </div>
+              <p class="card-text">
+                Le leader charismatique et gardien numéro un de la sélection. Une présence rassurante et décisive sur sa ligne.
+              </p>
+            </div>
+          </article>
+
+          <!-- La Défense (Ricardo Adé) -->
+          <article class="card reveal reveal-up" data-delay="100">
+            <figure class="card-image">
+              <span class="card-number">4</span>
+              <img src="images/ricardo-ade.jpg"
+                   alt="Ricardo Adé, défenseur central et leader de la sélection d'Haïti, photographié avec concentration lors d'une séance d'entraînement.">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Défense</span>
+              <h3 class="card-title">Ricardo Adé</h3>
+              <div class="player-meta">
+                <span class="meta-item">Club : <strong>LDU Quito (EC)</strong></span>
+                <span class="meta-item">Âge : <strong>36 ans</strong></span>
+                <span class="meta-item">Sélections : <strong>59</strong></span>
+              </div>
+              <p class="card-text">
+                Défenseur central d'expérience et patron de la Muraille Créole. Élu meilleur joueur du championnat équatorien.
+              </p>
+            </div>
+          </article>
+
+          <!-- L'Attaque (Duckens Nazon) -->
+          <article class="card reveal reveal-up" data-delay="200">
+            <figure class="card-image">
+              <span class="card-number">9</span>
+              <img src="images/duckens-nazon.jpg"
+                   alt="Duckens Nazon, l'attaquant vedette de la sélection d'Haïti, souriant avec fierté sous le maillot national.">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Attaque</span>
+              <h3 class="card-title">Duckens Nazon</h3>
+              <div class="player-meta">
+                <span class="meta-item">Club : <strong>Kayserispor (TR)</strong></span>
+                <span class="meta-item">Âge : <strong>32 ans</strong></span>
+                <span class="meta-item">Sélections : <strong>82 (44 buts)</strong></span>
+              </div>
+              <p class="card-text">
+                Le meilleur buteur historique d'Haïti. Puissant, vif et redoutable finisseur devant les cages adverses.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="gallery-actions reveal reveal-up" data-delay="300">
+          <a href="squad.html" class="btn btn-primary" id="btn-voir-tout">Voir tout l'effectif</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION PARCOURS & STATS (Flexbox 2 col)
+         ═══════════════════════════════════════════ -->
+    <section id="parcours" class="journey" aria-label="Parcours de qualification">
+      <div class="container">
+        <div class="journey-header reveal reveal-up">
+          <p class="section-label">Qualification</p>
+          <h2 class="section-heading">La Route vers le Mondial</h2>
+          <p class="section-desc" style="margin-bottom: 3.5rem;">
+            Chaque match a été un combat. Retour sur les étapes clés
+            qui ont conduit les Grenadiers à la Coupe du Monde.
+          </p>
+        </div>
+
+        <div class="journey-layout">
+
+          <!-- Colonne principale : Timeline -->
+          <section class="journey-main" aria-label="Chronologie du parcours">
+            <div class="timeline">
+
+              <article class="timeline-item reveal reveal-left" data-delay="0">
+                <p class="timeline-date">Phase de groupes — Juin 2025</p>
+                <h3 class="timeline-title">Premiers rugissements <span class="accent">· Premye Rerisman</span></h3>
+                <p class="timeline-text">
+                  Les Grenadiers dominent leur groupe de la zone CONCACAF avec trois victoires
+                  consécutives, imposant un jeu collectif fluide et une défense impénétrable
+                  qui surprend tous les observateurs.
+                </p>
+              </article>
+
+              <article class="timeline-item reveal reveal-left" data-delay="100">
+                <p class="timeline-date">Demi-finale — Octobre 2025</p>
+                <h3 class="timeline-title">Le match du siècle <span class="accent">· Match Syèk la</span></h3>
+                <p class="timeline-text">
+                  Face au Mexique, dans une ambiance électrique à Port-au-Prince,
+                  Haïti arrache la victoire 2-1 dans les arrêts de jeu grâce à un coup franc magistral.
+                  Le stade Sylvio Cator explose de joie.
+                </p>
+              </article>
+
+              <article class="timeline-item reveal reveal-left" data-delay="200">
+                <p class="timeline-date">Qualification — Novembre 2025</p>
+                <h3 class="timeline-title">L'histoire est écrite <span class="accent">· Istwa a Ekri</span></h3>
+                <p class="timeline-text">
+                  Un match nul suffisant contre le Canada scelle la qualification historique.
+                  Des scènes de liesse inondent les rues de Port-au-Prince, Cap-Haïtien et
+                  la diaspora haïtienne à travers le monde entier.
+                </p>
+              </article>
+
+              <article class="timeline-item reveal reveal-left" data-delay="300">
+                <p class="timeline-date">Coupe du Monde — Juin 2026</p>
+                <h3 class="timeline-title">Le rêve commence <span class="accent">· Rèv la Kòmanse</span></h3>
+                <p class="timeline-text">
+                  Placés dans le Groupe C, les Grenadiers s'apprêtent à affronter
+                  le Brésil, le Maroc et l'Écosse. L'objectif : honorer le maillot
+                  et faire vibrer toute une nation.
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Sidebar -->
+          <aside class="journey-sidebar" aria-label="Statistiques et calendrier">
+
+            <section class="widget reveal reveal-right" data-delay="0" aria-label="Statistiques clés">
+              <h3 class="widget-title">Statistiques</h3>
+              <div class="stat-row">
+                <span class="stat-label">Classement FIFA</span>
+                <span class="stat-value highlight">46e</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Matchs joués</span>
+                <span class="stat-value">14</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Victoires</span>
+                <span class="stat-value">9</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Buts marqués</span>
+                <span class="stat-value highlight">27</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Buts encaissés</span>
+                <span class="stat-value">8</span>
+              </div>
+            </section>
+
+            <section class="widget reveal reveal-right" data-delay="100" aria-label="Calendrier des matchs">
+              <h3 class="widget-title">Phase de groupes</h3>
+              <div class="match-item">
+                <span class="match-teams">Haïti — Écosse</span>
+                <span class="match-date">13 Juin</span>
+              </div>
+              <div class="match-item">
+                <span class="match-teams">Haïti — Brésil</span>
+                <span class="match-date">19 Juin</span>
+              </div>
+              <div class="match-item">
+                <span class="match-teams">Haïti — Maroc</span>
+                <span class="match-date">24 Juin</span>
+              </div>
+            </section>
+
+            <section class="widget reveal reveal-right" data-delay="200" aria-label="Action et Préparation">
+              <h3 class="widget-title">En Action</h3>
+              <figure class="widget-team-fig">
+                <img src="images/home-hero.jpg" alt="Photographie d'action montrant les joueurs d'Haïti en pleine séance d'entraînement collective, disputant un ballon avec intensité.">
+                <figcaption class="widget-team-desc">Intensité et rigueur lors des entraînements des Grenadiers.</figcaption>
+              </figure>
+            </section>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION INSCRIPTION SUPPORTER
+         ═══════════════════════════════════════════ -->
+    <section id="supporter" class="signup" aria-label="Inscription supporter">
+      <div class="container">
+        <div class="signup-wrapper reveal reveal-up">
+          <p class="section-label">Rejoignez-nous</p>
+          <h2 class="section-heading">Devenez un Grenadier</h2>
+          <p class="section-desc">
+            Inscrivez-vous pour recevoir les dernières nouvelles de l'équipe,
+            les compositions d'avant-match et les alertes en direct pendant le Mondial.
+          </p>
+
+          <form class="signup-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="input-nom">Nom</label>
+                <input type="text" id="input-nom" name="nom" class="form-control"
+                       placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label for="input-prenom">Prénom</label>
+                <input type="text" id="input-prenom" name="prenom" class="form-control"
+                       placeholder="Votre prénom" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="input-email">E-mail</label>
+              <input type="email" id="input-email" name="email" class="form-control"
+                     placeholder="votre@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="input-message">Message (optionnel)</label>
+              <textarea id="input-message" name="message" class="form-control"
+                        placeholder="Un message de soutien pour les Grenadiers..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btn-submit">
+              S'inscrire
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       PIED DE PAGE
+       ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="images/fhf-logo.svg" alt="Fédération Haïtienne de Football" class="logo-img" style="height: 32px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+          <span class="logo-text">Grenadiers</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#accueil" id="footer-accueil">Accueil</a></li>
+          <li><a href="squad.html" id="footer-equipe">L'Équipe</a></li>
+          <li><a href="#parcours" id="footer-parcours">Parcours</a></li>
+          <li><a href="#supporter" id="footer-supporter">Supporter</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Les Grenadiers — Projet éducatif.</p>
+        <p class="footer-credits">L'Union Fait la Force 🇭🇹</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
