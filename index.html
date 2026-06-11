@@ -64,8 +64,12 @@
          ═══════════════════════════════════════════ -->
     <section id="accueil" class="hero" aria-label="Bannière principale">
       <figure class="hero-bg">
-        <img src="images/og-preview.jpg"
-             alt="Bannière officielle des Grenadiers d'Haïti célébrant leur parcours vers le Mondial 2026.">
+        <picture>
+          <!-- Sur smartphone (écrans max 768px), on affiche og-preview.jpg -->
+          <source media="(max-width: 768px)" srcset="images/og-preview.jpg">
+          <!-- Sur grand écran, on affiche la photo de l'équipe squad-team-2026.jpg -->
+          <img src="images/squad-team-2026.jpg" alt="Photo de groupe officielle de l'équipe de football d'Haïti posant ensemble sur la pelouse.">
+        </picture>
         <figcaption class="hero-overlay"></figcaption>
       </figure>
 
