@@ -1091,6 +1091,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .footer-copy {
