@@ -506,6 +506,106 @@ header {
   gap: 1rem;
 }
 
+/* Styling specific to Hero Actions Buttons for a clean 3D effect */
+.hero-actions .btn {
+  border-radius: 12px; /* Premium, modern rounded rectangle */
+  position: relative;
+  overflow: hidden;
+  padding: 0.9rem 2.4rem;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+/* Primary 3D Button ("Découvrir l'équipe") */
+.hero-actions .btn-primary {
+  background: var(--gold-gradient);
+  color: var(--bg-primary);
+  border: none;
+  transform: translateY(-3px);
+  /* 3D Extrusion + Top specular highlight + Ambient underglow */
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),  /* Specular top rim */
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15),      /* Bottom shading rim */
+    0 4px 0 #b38600,                         /* 3D side edge */
+    0 8px 20px rgba(245, 197, 24, 0.2);     /* Ambient underglow */
+}
+
+.hero-actions .btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+    0 6px 0 #b38600,                         /* Thicker 3D side */
+    0 12px 25px rgba(245, 197, 24, 0.35);    /* Brighter underglow */
+}
+
+/* Outline 3D Button ("Le parcours") */
+.hero-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  transform: translateY(-3px);
+  /* 3D Extrusion (subtle glass border style) + Soft drop shadow */
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 0 rgba(255, 255, 255, 0.05),
+    0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-actions .btn-outline:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 197, 24, 0.5); /* subtle gold accent tint on hover */
+  background: rgba(245, 197, 24, 0.03);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 6px 0 rgba(245, 197, 24, 0.15),
+    0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Click/Active override to simulate physical press */
+.hero-actions .btn:active {
+  transform: scale(0.98) translateY(1px) !important;
+  transition: transform 0.05s var(--ease) !important;
+}
+
+.hero-actions .btn-primary:active {
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 0px 0 #b38600,                         /* Flattened extrusion */
+    0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero-actions .btn-outline:active {
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0px 0 rgba(255, 255, 255, 0),
+    0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Glossy light sweep effect on hover */
+.hero-actions .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.hero-actions .btn:hover::before {
+  left: 150%;
+  transition: left 0.8s ease-in-out;
+}
+
+
 /* Animations clés pour le chargement du héros */
 .hero-eyebrow,
 .hero h1,
