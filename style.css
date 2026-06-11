@@ -395,6 +395,11 @@ header {
   box-shadow: 0 4px 18px rgba(245, 197, 24, 0.35);
 }
 
+/* — Menu Toggle (caché par défaut sur grand écran) — */
+.menu-toggle {
+  display: none;
+}
+
 /* =====================================================
    SECTION HÉROS
    ===================================================== */
@@ -1063,13 +1068,79 @@ footer {
     text-align: center;
   }
 
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+  }
+
+  /* Animation du hamburger en X */
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .nav-links {
-    gap: 1.25rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-glass);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border-bottom: 1px solid var(--border-subtle);
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+    z-index: 890;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    align-items: center;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .nav-links a {
-    font-size: 0.7rem;
-    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 0.4rem 0;
+  }
+
+  .nav-links a.nav-cta {
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .nav-links a::after {
+    display: none;
   }
 
   .journey-sidebar {
@@ -1078,10 +1149,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    display: none;
-  }
-
   .hero h1 {
     font-size: 2.6rem;
   }
