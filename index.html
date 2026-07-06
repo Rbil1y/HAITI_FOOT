@@ -43,17 +43,18 @@
           <span class="logo-sub">Haïti · Mondial 2026</span>
         </span>
       </a>
+      <input type="checkbox" id="menu-toggle-cb" class="menu-toggle-checkbox">
       <ul class="nav-links">
-        <li><a href="#accueil" id="nav-accueil">Accueil</a></li>
+        <li><a href="#accueil" id="nav-accueil"><label for="menu-toggle-cb">Accueil</label></a></li>
         <li><a href="squad.html" id="nav-equipe">L'Équipe</a></li>
-        <li><a href="#parcours" id="nav-parcours">Parcours</a></li>
-        <li><a href="#supporter" class="nav-cta" id="nav-supporter">Supporter ⚽</a></li>
+        <li><a href="#parcours" id="nav-parcours"><label for="menu-toggle-cb">Parcours</label></a></li>
+        <li><a href="#supporter" class="nav-cta" id="nav-supporter"><label for="menu-toggle-cb">Supporter ⚽</label></a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <label for="menu-toggle-cb" class="menu-toggle" aria-label="Ouvrir le menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
-      </button>
+      </label>
     </nav>
   </header>
 
@@ -364,7 +365,7 @@
         <div class="footer-bottom-left">
           <p class="footer-copy">&copy; 2026 Les Grenadiers — Projet éducatif.</p>
           <span class="footer-separator" aria-hidden="true">&bull;</span>
-          <p class="footer-aylab">Créé par <button class="aylab-trigger" id="aylab-trigger">Aylab</button></p>
+          <p class="footer-aylab">Créé par <a href="#contact-modal" class="aylab-trigger" id="aylab-trigger">Aylab</a></p>
         </div>
         <p class="footer-credits">L'Union Fait la Force 🇭🇹</p>
       </div>
@@ -372,10 +373,10 @@
   </footer>
 
   <!-- Modal Contact Aylab -->
-  <div id="contact-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
-    <div class="modal-backdrop"></div>
+  <div id="contact-modal" class="modal" role="dialog" aria-labelledby="modal-title">
+    <a href="#aylab-trigger" class="modal-backdrop" aria-label="Fermer la fenêtre"></a>
     <div class="modal-card">
-      <button class="modal-close" id="modal-close" aria-label="Fermer la fenêtre">&times;</button>
+      <a href="#aylab-trigger" class="modal-close" id="modal-close" aria-label="Fermer la fenêtre">&times;</a>
       <div class="modal-body">
         <div class="avatar-circle">BE</div>
         <h3 id="modal-title" class="modal-name">Billy Rolph EXUME</h3>
@@ -400,55 +401,7 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      
-      menuToggle.addEventListener('click', () => {
-        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !isExpanded);
-        navLinks.classList.toggle('active');
-      });
 
-      // Fermer le menu lors du clic sur un lien
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.setAttribute('aria-expanded', 'false');
-          navLinks.classList.remove('active');
-        });
-      });
-
-      // Aylab Contact Modal Logic
-      const modal = document.getElementById('contact-modal');
-      const trigger = document.getElementById('aylab-trigger');
-      const closeBtn = document.getElementById('modal-close');
-      const backdrop = modal.querySelector('.modal-backdrop');
-
-      function openModal() {
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      trigger.addEventListener('click', openModal);
-      closeBtn.addEventListener('click', closeModal);
-      backdrop.addEventListener('click', closeModal);
-
-      // Close modal on Escape key press
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-          closeModal();
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
